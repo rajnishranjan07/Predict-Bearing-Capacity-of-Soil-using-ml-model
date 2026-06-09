@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result | Bearing Capacity AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Prediction Result</h2>
+
+    <div class="result-box">
+        <p>Ultimate Bearing Capacity</p>
+        <h3>{{ ultimate }} kN/m²</h3>
+
+        <p>Safe Bearing Capacity</p>
+        <h3>{{ safe }} kN/m²</h3>
+    </div>
+
+    <div class="actions">
+        <a href="/predict">New Prediction</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

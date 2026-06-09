@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction | Bearing Capacity AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card large">
+    <h2>Soil Bearing Capacity Prediction</h2>
+    <p class="subtitle">AI model based on Terzaghi Equation</p>
+
+    <form method="post" onsubmit="return validateForm()">
+
+        <label>Soil Type</label>
+        <select name="soil" required>
+            <option value="">Select Soil</option>
+            <option>Alluvial</option>
+            <option>Clayey Loam</option>
+            <option>Silty Clay Loam</option>
+        </select>
+
+        <label>Footing Type</label>
+        <select name="footing" required>
+            <option value="">Select Footing</option>
+            <option>Strip</option>
+            <option>Isolated(Square)</option>
+            <option>Isolated(Rectangular)</option>
+            <option>Isolated(Circular)</option>
+            <option>Combined</option>
+        </select>
+
+        <label>Cohesion (kN/m²)</label>
+        <input type="number" step="any" name="c" required>
+
+        <label>Angle of Friction φ (°)</label>
+        <input type="number" step="any" name="phi" required>
+
+        <label>Unit Weight γ (kN/m³)</label>
+        <input type="number" step="any" name="gamma" required>
+
+        <label>Depth of Foundation (m)</label>
+        <input type="number" step="any" name="depth" required>
+        
+        <label>Width of Foundation (m)</label>
+        <input type="number" step="any" name="width" required>
+
+        <label>Factor of Safety</label>
+        <input type="number" step="any" name="fos" required>
+
+        <button type="submit">Predict Bearing Capacity</button>
+
+    <div class="actions">
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
